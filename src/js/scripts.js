@@ -5,7 +5,7 @@ let firstSection = document.querySelector(".services");
     ButtonGoForm = document.querySelector(".get-in-touch-a"),
     oldPosition = 0,
     upScroll = document.querySelector(".up-scroll"),
-    quotesBox = document.querySelector(".quotes-box"),
+    quote = document.querySelectorAll(".quote"),
     pointsBox = document.querySelectorAll(".points-box"),
     numberQuote = 0;
 
@@ -14,7 +14,7 @@ let firstSection = document.querySelector(".services");
     ButtonGoForm.onclick= scrollBottom;
     window.onscroll = onScrolling;
     upScroll.onclick = scrollTop;
-    quote();
+    quoteScroll();
 
 
 function popupOpen(){// dorobutu
@@ -56,15 +56,16 @@ function scrollTop(){
         },1)
     }
 }
-function quote(){// dorobutu
+function quoteScroll(){// dorobutu
     if(numberQuote == quotes.length){
         numberQuote = 0;
     }
     for(let i = 1; i < quotes.length; i++){
         pointsBox.innerHTML = `<span></span>`;
     }
+    quote.style.display = "block";
     numberQuote++;
     setTimeout(()=>{
-        quote();
+        quoteScroll();
     },1000)
 }
