@@ -1,0 +1,201 @@
+@font-face 
+    font-family: 'Roboto Slab'
+    src: url('../fonts/RobotoSlab-Regular.eot')
+    src: url('../fonts/RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoSlab-Regular.woff2') format('woff2'), url('../fonts/RobotoSlab-Regular.woff') format('woff'), url('../fonts/RobotoSlab-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+
+@font-face 
+    font-family: 'Roboto Slab'
+    src: url('../fonts/RobotoSlab-Bold.eot')
+    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoSlab-Bold.woff2') format('woff2'), url('../fonts/RobotoSlab-Bold.woff') format('woff'), url('../fonts/RobotoSlab-Bold.ttf') format('truetype')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+
+@font-face 
+    font-family: 'Montserrat'
+    src: url('../fonts/Montserrat-Bold.eot')
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+
+
+@font-face 
+    font-family: 'Montserrat'
+    src: url('../fonts/Montserrat-Regular.eot')
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+
+
+@import helper/vars
+@import helper/mixins
+
+@import components/header
+@import components/footer
+
+html 
+    font-size: 14px
+    font-family: "Roboto Slab"
+    line-height: 1.5em
+
+.wrapper 
+    margin: 0 auto
+    width: 72%
+
+section 
+    padding: 100px 0
+
+header
+    .header-content 
+        .header-star
+            margin-bottom: 0
+            font-size: 16px
+            font-family: "Montserrat" 
+
+.section-title
+    padding-bottom: 70px 
+    h2 
+        margin-bottom: 30px
+        font-size: 20px
+        color: $primary-text-color
+        font-weight: 400
+        font-family: "Montserrat"
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            bottom: -15px
+            width: 50px
+            height: 2px 
+            transform: translateX(-50%)
+            background: $primary-text-color
+    p,
+    ul a 
+        font-size: 16px
+        color: $primary-text-color
+        font-weight: 400
+        font-family: "Roboto Slab"
+    ul 
+        list-style: none
+        li 
+            margin-right: 3%
+            &:last-child
+                margin: 0
+        a 
+            text-decoration: none
+            &:hover 
+                color: #c0301c
+
+
+.services-cards 
+    img 
+        margin-bottom: 30px
+    .services-name 
+        color: $primary-text-color
+        font-weight: 400
+        font-family: "Montserrat"
+    .services-text 
+        color: $primary-text-color
+        font-weight: 400
+        font-family: "Roboto Slab"
+
+.about-us
+    background-color: #f8f8f8
+    .about-us-text 
+        color: $primary-text-color
+        font-weight: 400
+        font-family: "Roboto Slab"
+    .about-us-img 
+        padding-top: 70px
+        .man-img
+        img 
+            margin-bottom: 20px
+            width: 100%
+        .about-us-name 
+            margin-bottom: 15px
+        .about-us-work
+            color: $primary-text-color
+            font-weight: 400
+            font-family: "Roboto Slab"
+        
+.your-project
+    font-family: "Roboto Slab"
+    font-weight: 400
+    color: #fff 
+    background: #c0301c
+    span 
+        display: block
+        margin-bottom: 50px    
+    h3 
+        font-size: 30px
+        line-height: 44px        
+    a 
+        padding: 18px 28px
+        font-size: 18px       
+        font-family: "Roboto Slab"
+        font-weight: 400
+
+
+
+.up-scroll
+    display: inline-block
+    position: fixed
+    right: 10vh
+    bottom: 10vh
+    z-index: 10
+    a 
+        display: inline-block
+        padding: 19px
+        width: 19px
+        height: 19px
+        background: #f8f8f8
+        border: 3px solid #c0301c
+        border-radius: 50%
+        &:hover
+            background: #fff
+        .top-arrow
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            polyline 
+                transform-origin: center
+                transform:  rotate(180deg)
+
+.blog 
+    height: 1075px
+
+.partner-quote
+    text-align: center
+    font-size: 18px
+    line-height: 30px
+    color: #555
+    background: #f8f8f8
+    .partners 
+        padding-bottom: 70px
+        img 
+            margin-right: 60px
+        &::last-child
+            margin: 0
+.quotes-box  
+    blockquote 
+        display: none
+    .points-box 
+        span 
+            display: inline-block
+            margin-right: 5px
+            width: 12px
+            height: 12px
+            background: #ddd
+            border-radius: 50% 
+        .active 
+            background: #c0301c        
+.get-in-touch
+    height: 660px

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        title Startup official site
+        link(rel="stylesheet", href="css/style.css")
+    body
+        include helper/vars
+        include helper/mixins
+        include components/header
+        main 
+            .up-scroll
+            section.services.wrapper.text-center 
+                .section-title
+                    h2.underline.position-relative.text-uppercase Services
+                    p We offer ipsum dolor sit amet, consetetur sadipscing elitr amet
+                .services-cards.row 
+                        .col-4 
+                            img(src="#", alt="services Clean Typography img letter A")
+                            p.services-name.text-uppercase Clean Typography
+                            p.services-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
+                        .col-4 
+                            img(src="#", alt="services Rock Solid Code")
+                            p.services-name.text-uppercase Rock Solid Code
+                            p.services-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
+                        .col-4 
+                            img(src="#", alt="services Expert Support img lifebuoy")
+                            p.services-name.text-uppercase Expert Support
+                            p.services-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
+            section.about-us 
+                .wrapper
+                    .section-title.text-center
+                            h2.underline.position-relative.text-uppercase About us
+                            p We offer ipsum dolor sit amet, consetetur sadipscing elitr amet        
+                    .about-us-text.row
+                        p.col-6 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.
+                        p.col-6 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.       
+                    .about-us-img.text-center.row
+                        .man-1.col-3
+                            .man-img 
+                                img(src="img/about-us-man-1.jpg", alt="man 1")
+                            p.about-us-name Md. Khalil Uddin
+                            p.about-us-work Head of Ideas
+                        .man-2.col-3
+                            .man-img 
+                                img(src="img/about-us-man-2.jpg", alt="man 2")
+                            p.about-us-name Rubel Miah
+                            p.about-us-work Lead WordPress Developer
+                        .man-3.col-3
+                            .man-img 
+                                img(src="img/about-us-man-3.jpg", alt="man 3")
+                            p.about-us-name Shamim Mia
+                            p.about-us-work Sr. Web Developer
+                        .man-4.col-3
+                            .man-img 
+                                img(src="img/about-us-man-4.jpg", alt="man 4")
+                            p.about-us-name John Doe
+                            p.about-us-work Front-end Developer
+            section.latest-works.wrapper
+                .section-title.text-center
+                    h2.underline.position-relative.text-uppercase Latest Works
+                    ul
+                        li.d-inline-block
+                            a(href="#") All
+                        li.d-inline-block
+                            a(href="#") Branding 
+                        li.d-inline-block
+                            a(href="#") Design
+                        li.d-inline-block
+                            a(href="#") Development
+                        li.d-inline-block
+                            a(href="#") Strategy                     
+            section.your-project 
+                .wrapper.text-center 
+                    span 
+                        h3 Do you like OUR WORK so far?
+                        h3 Let's talk about YOUR PROJECT!
+                    a.get-in-touch-a.btn-primary-a.text-uppercase(href="#") Get in Touch
+            section.blog
+                .section-title.text-center
+                    h2.underline.position-relative.text-uppercase Recent blog posts
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+                .ads
+            section.partner-quote
+                .partners
+                    img(src="img/partner1.png", alt="our partners")
+                    img(src="img/partner2.png", alt="our partners")
+                    img(src="img/partner3.png", alt="our partners")
+                    img(src="img/partner4.png", alt="our partners")
+                    img(src="img/partner5.png", alt="our partners")
+                .quotes-box
+                    blockquote 
+                        p Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                        cite John Doe Google Inc.
+                    blockquote
+                        p Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                        cite John Doe
+                    blockquote
+                        p Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                        cite Google Inc.
+                    .points-box
+            section.get-in-touch
+        include components/footer
+        script(src="js/scripts.js")
