@@ -62,26 +62,62 @@ html(lang="en")
                     h2.underline.position-relative.text-uppercase Latest Works
                     ul
                         li.d-inline-block
-                            a(href="#") All
+                            a.filter-word(href="#") All
                         li.d-inline-block
-                            a(href="#") Branding 
+                            a.filter-word(href="#") Branding 
                         li.d-inline-block
-                            a(href="#") Design
+                            a.filter-word(href="#") Design
                         li.d-inline-block
-                            a(href="#") Development
+                            a.filter-word(href="#") Development
                         li.d-inline-block
-                            a(href="#") Strategy                     
+                            a.filter-word(href="#") Strategy  
+                .cards
+                    +card("#", "card1", "Hair Dresser", "Branding", "#")
+                    +card("#", "card2", "Hair Dresser", "Design", "#")
+                    +card("#", "card3", "Hair Dresser", "Development", "#")
+                    +card("#", "card4", "Hair Dresser", "Strategy", "#")
+                    +card("#", "card5", "Hair Dresser", "Strategy", "#")
+                    +card("#", "card6", "Hair Dresser", "Design", "#")
+                    +card("#", "card7", "Hair Dresser", "Development", "#")
+                    +card("#", "card8", "Hair Dresser", "Design", "#")
+                    +card("#", "card9", "Hair Dresser", "Branding", "#")                   
             section.your-project 
                 .wrapper.text-center 
                     span 
                         h3 Do you like OUR WORK so far?
                         h3 Let's talk about YOUR PROJECT!
                     a.get-in-touch-a.btn-primary-a.text-uppercase(href="#") Get in Touch
-            section.blog
+            section.blog.wrapper
                 .section-title.text-center
                     h2.underline.position-relative.text-uppercase Recent blog posts
                     p Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
-                .ads
+                .blog-box
+                    article
+                        .article-img 
+                            img(src="img/blog-img1.jpg", alt="blog img")
+                        .article-info
+                            .article-header
+                                .article-data 
+                                    span 18
+                                    p oct
+                                .article-title 
+                                    h5 Startup ideas needs to be funded 
+                                    p By Khalil Uddin in  Development 
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam 
+                            a(href="#") Read more                             
+                    article
+                        .article-img 
+                            img(src="img/blog-img2.jpg", alt="blog img")
+                        .article-info
+                            .article-header
+                                .article-data 
+                                    span 18
+                                    p oct
+                                .article-title 
+                                    h5 User Interface Designing Elements 
+                                    p By Khalil Uddin in  Development 
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor idunt ut labore et dolore aliquyam 
+                            a(href="#") Read more 
             section.partner-quote
                 .partners
                     img(src="img/partner1.png", alt="our partners")
@@ -91,7 +127,8 @@ html(lang="en")
                     img(src="img/partner5.png", alt="our partners")
                 .quotes-box
                     blockquote.quote
-                        p Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                        p Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                        p Temporibus autem quibusdam et aut officiis debitis aut rerum”
                         cite John Doe Google Inc.
                     blockquote.quote
                         p Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
@@ -100,6 +137,39 @@ html(lang="en")
                         p Temporibus autem quibusdam et aut officiis debitis aut rerum”
                         cite Google Inc.
                     .points-box
-            section.get-in-touch
+            section.wrapper.get-in-touch
+                .section-title.text-center
+                    h2.underline.position-relative.text-uppercase Get in touch
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+                .form-info 
+                    .form-info-block
+                        h5 Address
+                        p 312, 7th Ave, New York
+                        p NY 101200, United States of America
+                    .form-info-block
+                        h5 Hotline (24x7)
+                        p +65 0052 300, +65 88251 210
+                        p +88 01723 511 340
+                    .form-info-block
+                        h5 E-mail
+                        p shapedtheme@gmail.com
+                        p khalilkode@gmail.com       
+                .form-box 
+                    form(action="#") 
+                        span
+                            lebel(for="#")
+                                input(type="t ext")
+                            lebel(for="#")
+                                input(type="text")
+                        span 
+                            lebel(for="#")
+                                input(type="text")
+                            lebel(for="#")
+                                input(type="text")
+                        label(for="#")
+                            input(type="textarea").textarea
+                        label(for="#")
+                            input(type="submit").submit
+                            p * We’ll contact you as as possible. We don’t reply on Monday.
         include components/footer
         script(src="js/scripts.js")

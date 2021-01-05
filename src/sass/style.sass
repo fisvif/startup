@@ -169,8 +169,77 @@ header
                 transform-origin: center
                 transform:  rotate(180deg)
 
-.blog 
-    height: 1075px
+.blog-box
+    article 
+        margin-bottom: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid #ddd
+    &:last-child article
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: none
+    .article-img
+        display: inline-block
+        width: 460px
+        img
+            width: 100%
+    .article-info 
+        display: inline-block
+        margin-left: 40px
+        p 
+            font-size: 14px
+            line-height: 24px
+            color: #555
+            font-weight: 400
+            font-family: "Roboto Slab"
+        a 
+            font-size: 13px
+            letter-spacing: 1px
+            line-height: 24px
+            color: #777
+            font-weight: 700
+            text-transform: uppercase
+            font-family: "Roboto Slab"
+            &:hover
+                color: #c0301c
+
+    .article-header
+        margin-bottom: 20px
+        .article-data 
+            display: inline-block
+            padding: 20px 22px
+            font-size: 24px
+            letter-spacing: 2px
+            line-height: 20px
+            color: #777
+            text-align: center
+            font-weight: bold
+            border: 2px solid #555
+            p 
+                margin: 0
+                font-weight: bold
+        .article-title 
+            display: inline-block
+            padding: 15px 0
+            margin-left: 25px
+        h5
+            margin-bottom: 19px
+            font-size: 16px
+            line-height: 24px
+            color: #c0301c
+            text-transform: uppercase
+            font-weight: 400
+            font-family: "Montserrat"
+        p 
+            margin: 0
+            font-size: 13px
+            line-height: 24px
+            color: #777777
+            font-weight: 400
+            font-family: "Roboto Slab"
+    .red 
+        color: #c0301c
+
 
 .partner-quote
     text-align: center
@@ -184,7 +253,8 @@ header
             margin-right: 60px
         &::last-child
             margin: 0
-.quotes-box  
+.quotes-box
+    min-height: 120px  
     blockquote 
         display: none
     .points-box 
@@ -198,4 +268,52 @@ header
         .active 
             background: #c0301c        
 .get-in-touch
-    height: 660px
+    .form-info 
+        display: inline-block
+        width: 40%
+        .form-info-block 
+            margin-bottom: 38px
+        h5 
+            margin-bottom: 19px
+            font-size: 14px
+            text-transform: uppercase
+            line-height: 30px
+            color: #555
+            font-family: "Myriad Pro"
+        p 
+            margin: 0
+            font-size: 12px
+            line-height: 20px
+            color: #555
+            font-weight: 400
+            font-family: "Roboto Slab"
+    .form-box 
+        display: inline-block
+        width: 60%
+        input 
+            margin-bottom: 20px
+            padding: 10px
+            font-size: 12px
+            line-height: 20px
+            color: #555
+            font-weight: 400
+            font-family: "Roboto Slab"
+            border: 1px solid #555
+            border-radius: none
+        // . 
+        //     width: 350px
+        .textarea 
+            max-width: 730px
+            max-height: 105px
+        .submit 
+            padding: 15px 35px
+            font-size: 12px
+            letter-spacing: 1px
+            line-height: 20px
+            color: #555555
+            font-weight: 400
+            font-family: "Roboto Slab"
+            background: transparent
+            &:hover 
+                color: white 
+                background: #c0301c
