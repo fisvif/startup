@@ -270,7 +270,7 @@ header
 .get-in-touch
     .form-info 
         display: inline-block
-        width: 40%
+        width: 30%
         .form-info-block 
             margin-bottom: 38px
         h5 
@@ -289,31 +289,64 @@ header
             font-family: "Roboto Slab"
     .form-box 
         display: inline-block
-        width: 60%
+        width: 70%
+        .margin-left
+            margin-left: 6%
         input 
             margin-bottom: 20px
             padding: 10px
+            width: 47%
             font-size: 12px
             line-height: 20px
             color: #555
             font-weight: 400
             font-family: "Roboto Slab"
+            text-transform: uppercase
             border: 1px solid #555
-            border-radius: none
-        // . 
-        //     width: 350px
+            border-radius: 0
+            &:focus
+                border-color: #c0301c
         .textarea 
-            max-width: 730px
-            max-height: 105px
-        .submit 
-            padding: 15px 35px
-            font-size: 12px
-            letter-spacing: 1px
-            line-height: 20px
-            color: #555555
-            font-weight: 400
-            font-family: "Roboto Slab"
-            background: transparent
-            &:hover 
-                color: white 
-                background: #c0301c
+            width: 100%
+            textarea
+                padding: 10px
+                width: 100%
+                height: 105px
+                min-height: 100px
+                max-height: 150px
+                font-size: 12px
+                line-height: 20px
+                color: #555555
+                font-weight: 400
+                font-family: "Roboto Slab"
+                text-transform: uppercase
+                border: 1px solid #555
+                border-radius: 0
+                &:focus
+                    border-color: #c0301c
+                
+.submit 
+    input
+        display: inline-block
+        padding: 15px 35px
+        width: 170px
+        font-size: 12px
+        letter-spacing: 1px
+        line-height: 20px
+        color: #555555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        background: transparent
+        &:hover 
+            color: white 
+            background: #c0301c
+    span 
+        display: inline-block
+        color: #c0301c
+        margin-left: 5%
+    p 
+        display: inline-block 
+        font-size: 12px
+        line-height: 20px
+        font-weight: 400
+        font-family: "Roboto Slab"

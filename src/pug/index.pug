@@ -72,15 +72,15 @@ html(lang="en")
                         li.d-inline-block
                             a.filter-word(href="#") Strategy  
                 .cards
-                    +card("#", "card1", "Hair Dresser", "Branding", "#")
-                    +card("#", "card2", "Hair Dresser", "Design", "#")
-                    +card("#", "card3", "Hair Dresser", "Development", "#")
-                    +card("#", "card4", "Hair Dresser", "Strategy", "#")
-                    +card("#", "card5", "Hair Dresser", "Strategy", "#")
-                    +card("#", "card6", "Hair Dresser", "Design", "#")
-                    +card("#", "card7", "Hair Dresser", "Development", "#")
-                    +card("#", "card8", "Hair Dresser", "Design", "#")
-                    +card("#", "card9", "Hair Dresser", "Branding", "#")                   
+                    +card("img/card1.jpg", "card1", "Hair Dresser", "Branding", "#")
+                    +card("img/card2.jpg", "card2", "Hair Dresser", "Design", "#")
+                    +card("img/card3.jpg", "card3", "Hair Dresser", "Development", "#")
+                    +card("img/card4.jpg", "card4", "Hair Dresser", "Strategy", "#")
+                    +card("img/card5.jpg", "card5", "Hair Dresser", "Strategy", "#")
+                    +card("img/card6.jpg", "card6", "Hair Dresser", "Design", "#")
+                    +card("img/card7.jpg", "card7", "Hair Dresser", "Development", "#")
+                    +card("img/card8.jpg", "card8", "Hair Dresser", "Design", "#")
+                    +card("img/card9.jpg", "card9", "Hair Dresser", "Branding", "#")                   
             section.your-project 
                 .wrapper.text-center 
                     span 
@@ -158,18 +158,19 @@ html(lang="en")
                     form(action="#") 
                         span
                             lebel(for="#")
-                                input(type="t ext")
-                            lebel(for="#")
-                                input(type="text")
+                                input(type="text" maxlength="30" placeholder="Your name")
+                            lebel.margin-left(for="#")
+                                input(type="text" maxlength="30" placeholder="Your E-mail")
                         span 
                             lebel(for="#")
-                                input(type="text")
-                            lebel(for="#")
-                                input(type="text")
-                        label(for="#")
-                            input(type="textarea").textarea
-                        label(for="#")
-                            input(type="submit").submit
-                            p * We’ll contact you as as possible. We don’t reply on Monday.
+                                input(type="text" maxlength="30" placeholder="Your subject")
+                            lebel.margin-left(for="#")
+                                input(type="text" maxlength="30" placeholder="Company name")
+                        label.textarea(for="#")
+                            textarea(maxlength="150" placeholder="Write your message")
+                        label(for="#").submit
+                            input(type="submit" value="Send message")
+                            span * 
+                            p We’ll contact you as as possible. We don’t reply on Monday.
         include components/footer
         script(src="js/scripts.js")

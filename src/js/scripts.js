@@ -8,7 +8,10 @@ let firstSection = document.querySelector(".services");
     quote = document.querySelectorAll(".quote"),
     pointsBox = document.querySelectorAll(".points-box"),
     numberQuote = 0,
-    filterWord = document.querySelectorAll(".filter-word");
+    filterWord = document.querySelectorAll(".filter-word"),
+    cardDescription = document.querySelectorAll(".description"),
+    cardWork = document.querySelectorAll(".card-work"),
+    popupCloaseButtom = document.querySelector(".close-popup");
 
 
     popup.onclick = popupOpen;
@@ -16,27 +19,28 @@ let firstSection = document.querySelector(".services");
     window.onscroll = onScrolling;
     upScroll.onclick = scrollTop;
     popupBox.onclick = popupCloase;
+    
     quoteScroll();
 
-
 function popupOpen(){// dorobutu
-    popupBox.style.width = "100%";
-    popupBox.style.height = "100%";
-    popupBox.style.zIndex = "5";
-    popupBox.innerHTML = `<div class="register">
-        <h4>Registration</h4>
-        <form>
-            <label><input type="text"></input></label>
-            <label><input type="text"></input></label>
-            <label><input type="text"></input></label>
-            <label><input type="submit"></input></label>
-        </form>
+    popupBox.style.display = "block";
+    popupBox.innerHTML = `<div class="box-popup ">
+        <div class="register">
+            <span class="close-popup"><span></span><span></span></span>
+            <h4>Registration</h4>
+            <form>
+                <label><input type="text" maxlength="30" placeholder="Your Name"></input></label>
+                <label><input type="text" maxlength="30" placeholder="Your E-mail"></input></label>
+                <label class="margin-bottom"><input type="text" maxlength="30" placeholder="Your password"></input></label>
+                <label class="submit"><input type="submit"></input></label>
+            </form>
+        </div>
+        <div class="bg-popup"></div>
     </div>`;
+    popupCloaseButtom.onclick = popupCloase;
 }
 function popupCloase(){
-    popupBox.style.width = "0";
-    popupBox.style.height = "0";
-    popupBox.style.zIndex = "-1";
+    popupBox.style.display = "none";
 }
 function scrollBottom(event){
     event.preventDefault();
@@ -85,16 +89,11 @@ function quoteScroll(){
         quoteScroll();
     },1500)
 }
-function filter(){
-    if(){
-        
-    }else if(){
 
-    }else if(){
-
-    }else if(){
-
-    }else if(){
-
-    }
+// filterWord.forEach(element => {filter(word)});
+filterWord.onclick = filter;
+function filter(event){
+    event.preventDefault();
+    // cardWork.onclick = this.textContent;
+    // cardWork.style.display = "inline-block";
 }
