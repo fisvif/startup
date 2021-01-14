@@ -1,20 +1,20 @@
 let firstSection = document.querySelector(".services");
-    popup = document.querySelector("#popup"),
+    popup = document.querySelectorAll(".popup"),
     popupBox = document.querySelector(".popup"),
     SectionGetInTouch = document.querySelector(".get-in-touch"),
     ButtonGoForm = document.querySelector(".get-in-touch-a"),
     oldPosition = 0,
     upScroll = document.querySelector(".up-scroll"),
     quote = document.querySelectorAll(".quote"),
-    pointsBox = document.querySelectorAll(".points-box"),
+    point = document.querySelectorAll(".point"),
     numberQuote = 0,
     filterWord = document.querySelectorAll(".filter-word"),
-    cardDescription = document.querySelectorAll(".description"),
     cardWork = document.querySelectorAll(".card-work"),
     popupCloaseButtom = document.querySelector(".close-popup");
 
-
-    popup.onclick = popupOpen;
+    popup.forEach(element => {
+        element.onclick = popupOpen;
+    });
     ButtonGoForm.onclick= scrollBottom;
     window.onscroll = onScrolling;
     upScroll.onclick = scrollTop;
@@ -24,20 +24,7 @@ let firstSection = document.querySelector(".services");
 
 function popupOpen(){// dorobutu
     popupBox.style.display = "block";
-    popupBox.innerHTML = `<div class="box-popup ">
-        <div class="register">
-            <span class="close-popup"><span></span><span></span></span>
-            <h4>Registration</h4>
-            <form>
-                <label><input type="text" maxlength="30" placeholder="Your Name"></input></label>
-                <label><input type="text" maxlength="30" placeholder="Your E-mail"></input></label>
-                <label class="margin-bottom"><input type="text" maxlength="30" placeholder="Your password"></input></label>
-                <label class="submit"><input type="submit"></input></label>
-            </form>
-        </div>
-        <div class="bg-popup"></div>
-    </div>`;
-    popupCloaseButtom.onclick = popupCloase;
+    // popupCloaseButtom.onclick = popupCloase;
 }
 function popupCloase(){
     popupBox.style.display = "none";
@@ -83,17 +70,26 @@ function quoteScroll(){
         numberQuote = 0;
     }
     quote[numberQuote].style.display = "block";
+    point[numberQuote].style.background = "#c0301c";
     numberQuote++;
     setTimeout(()=>{
         quote[numberQuote - 1].style.display = "none";
+        point[numberQuote - 1].style.background = "#dddddd";
         quoteScroll();
     },1500)
 }
-
-// filterWord.forEach(element => {filter(word)});
-filterWord.onclick = filter;
+filterWord.forEach(element => {
+    element.onclick = filter;
+});
 function filter(event){
     event.preventDefault();
-    // cardWork.onclick = this.textContent;
-    // cardWork.style.display = "inline-block";
+
+    cardWork.forEach(element => {
+        if(element.classList.contains(this.textContent) || this.textContent == "All"){
+            element.style.display = "inline-block";
+        }else{
+            element.style.display = "none";
+        }
+
+    });
 }

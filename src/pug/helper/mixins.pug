@@ -1,7 +1,7 @@
-mixin card(src, alt, name, description, href)
-    .card-work
+mixin card(src, alt, name, description, href, filter)
+    .card-work(class= filter)
         img(src= src, alt= alt)
         span 
-            p(name)
-            p.description(description)
+            p= name
+            p.description= description
             a(href= href)
