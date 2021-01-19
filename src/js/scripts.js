@@ -1,6 +1,6 @@
 let firstSection = document.querySelector(".services");
     popup = document.querySelectorAll(".popup"),
-    popupBox = document.querySelector(".popup"),
+    popupBox = document.querySelector(".popup-box"),
     SectionGetInTouch = document.querySelector(".get-in-touch"),
     ButtonGoForm = document.querySelector(".get-in-touch-a"),
     oldPosition = 0,
@@ -10,21 +10,38 @@ let firstSection = document.querySelector(".services");
     numberQuote = 0,
     filterWord = document.querySelectorAll(".filter-word"),
     cardWork = document.querySelectorAll(".card-work"),
-    popupCloaseButtom = document.querySelector(".close-popup");
+    popupCloaseButtom = document.querySelectorAll(".close-popup"),
+    aboutArrowLeft = document.querySelector(".about-us-arrow-left"),
+    aboutArrowRight = document.querySelector(".about-us-arrow-right"),
+    menImgBox = document.querySelector(".men-img"),
+    man = document.querySelector(".man");
+    
+    
+    ButtonGoForm.onclick= scrollBottom;
+    window.onscroll = onScrolling;
+    upScroll.onclick = scrollTop;
+    aboutArrowLeft.onclick = slidLeft;
+    aboutArrowRight.onclick = slidRight;
 
     popup.forEach(element => {
         element.onclick = popupOpen;
     });
-    ButtonGoForm.onclick= scrollBottom;
-    window.onscroll = onScrolling;
-    upScroll.onclick = scrollTop;
-    popupBox.onclick = popupCloase;
-    
+    popupCloaseButtom.forEach(element => {
+        element.onclick = popupCloase;
+    });
+    // popupBox.forEach(element => {
+    //     element.onclick = popupCloase;
+    // });
+    filterWord.forEach(element => {
+        element.onclick = filter;
+    });    
     quoteScroll();
 
-function popupOpen(){// dorobutu
-    popupBox.style.display = "block";
-    // popupCloaseButtom.onclick = popupCloase;
+function popupOpen(event){// dorobutu
+    event.preventDefault();
+    console.log(this);
+    this.nextElementSibling.style.display = "block";
+    
 }
 function popupCloase(){
     popupBox.style.display = "none";
@@ -78,9 +95,6 @@ function quoteScroll(){
         quoteScroll();
     },1500)
 }
-filterWord.forEach(element => {
-    element.onclick = filter;
-});
 function filter(event){
     event.preventDefault();
 
@@ -92,4 +106,21 @@ function filter(event){
         }
 
     });
+}
+function slidLeft(event){
+    event.preventDefault();
+    console.log(menImgBox.scrollLeft);
+    if(0 == menImgBox.scrollLeft){
+        menImgBox.scrollLeft += menImgBox.scrollWidth;
+    }else{
+        menImgBox.scrollLeft -= man.clientWidth;
+    }
+}
+function slidRight(event){
+    event.preventDefault();
+    if(menImgBox.scrollWidth - menImgBox.scrollLeft == menImgBox.scrollLeft){
+        menImgBox.scrollLeft = 0;
+    }else{
+        menImgBox.scrollLeft += man.clientWidth;
+    }
 }

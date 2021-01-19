@@ -113,19 +113,64 @@ header
         font-weight: 400
         font-family: "Roboto Slab"
     .about-us-img 
-        padding-top: 70px        
         position: relative
+        padding-top: 70px        
+        text-align: center
+        .men-img 
+            display: flex
+            overflow: hidden
+            transition: all 0.5s ease
+        .about-us-arrow-left,
+        .about-us-arrow-right 
+            position: absolute
+            top: 50%
+            width: 35px
+            height: 40px
+            background: #c7c7c7
+            transform: translate(0, -50%)
+            &:hover
+                background: #c0301c
+        .about-us-arrow-left 
+            left: 15px
+        .about-us-arrow-right
+            right: 15px
+        .man 
+            padding: 0 15px
+            flex: 0 0 25%
         .man-img
-        img 
-            margin-bottom: 20px
+            img 
+                margin-bottom: 20px
+                width: 100%
+            .about-us-name 
+                margin-bottom: 15px
+            .about-us-work
+                color: $primary-text-color
+                font-weight: 400
+                font-family: "Roboto Slab"
+.cards 
+    display: flex
+    flex-wrap: wrap
+    .card-work 
+        position: relative
+        margin: 15px
+        flex: 0 0 25%           
+        span 
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            overflow: hidden
             width: 100%
-        .about-us-name 
-            margin-bottom: 15px
-        .about-us-work
-            color: $primary-text-color
-            font-weight: 400
-            font-family: "Roboto Slab"
-        
+            height: 100%
+            left: 0
+            top: 0
+            background: #c0301c
+            color: #fff
+            opacity: 0.8
+        &:hover span 
+            overflow: visible
+
+
 .your-project
     font-family: "Roboto Slab"
     font-weight: 400
@@ -172,6 +217,8 @@ header
 
 .blog-box
     article 
+        display: flex
+        justify-content: space-between
         margin-bottom: 40px
         padding-bottom: 40px
         border-bottom: 1px solid #ddd
@@ -180,13 +227,14 @@ header
         padding-bottom: 0
         border-bottom: none
     .article-img
-        display: inline-block
-        width: 460px
+        width: 45%
         img
             width: 100%
     .article-info 
-        display: inline-block
-        margin-left: 40px
+        position: relative
+        width: 55%
+        padding-left: 20px
+        box-sizing: border-box
         p 
             font-size: 14px
             line-height: 24px
@@ -207,9 +255,10 @@ header
 
     .article-header
         margin-bottom: 20px
+        display: flex
+        align-items: 
         .article-data 
-            display: inline-block
-            padding: 20px 22px
+            padding: 17px 20px
             font-size: 24px
             letter-spacing: 2px
             line-height: 20px
@@ -221,7 +270,6 @@ header
                 margin: 0
                 font-weight: bold
         .article-title 
-            display: inline-block
             padding: 15px 0
             margin-left: 25px
         h5
@@ -239,7 +287,10 @@ header
             color: #777777
             font-weight: 400
             font-family: "Roboto Slab"
-
+.blog-popup-info 
+    overflow-y: scroll
+    max-height: 400px
+    background: #fff
 .partner-quote
     text-align: center
     font-size: 18px
@@ -349,3 +400,4 @@ header
         line-height: 20px
         font-weight: 400
         font-family: "Roboto Slab"
+z
