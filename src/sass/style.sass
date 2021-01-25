@@ -153,13 +153,13 @@ header
     .card-work 
         position: relative
         margin: 15px
-        flex: 0 0 25%           
+        flex: 0 0 25%    
         span 
             position: absolute
-            display: flex
             justify-content: center
             align-items: center
-            overflow: hidden
+            flex-direction: column
+            display: none
             width: 100%
             height: 100%
             left: 0
@@ -167,8 +167,10 @@ header
             background: #c0301c
             color: #fff
             opacity: 0.8
+        a 
+            text-decoration: none
         &:hover span 
-            overflow: visible
+            display: flex
 
 
 .your-project
@@ -222,7 +224,7 @@ header
         margin-bottom: 40px
         padding-bottom: 40px
         border-bottom: 1px solid #ddd
-    &:last-child article
+    & article:last-child 
         margin-bottom: 0
         padding-bottom: 0
         border-bottom: none
@@ -258,7 +260,7 @@ header
         display: flex
         align-items: 
         .article-data 
-            padding: 17px 20px
+            padding: 15px 20px
             font-size: 24px
             letter-spacing: 2px
             line-height: 20px
@@ -270,10 +272,9 @@ header
                 margin: 0
                 font-weight: bold
         .article-title 
-            padding: 15px 0
             margin-left: 25px
         h5
-            margin-bottom: 19px
+            margin-bottom: 0
             font-size: 16px
             line-height: 24px
             color: #c0301c
@@ -319,8 +320,6 @@ header
                     
 .get-in-touch
     .form-info 
-        display: inline-block
-        width: 30%
         .form-info-block 
             margin-bottom: 38px
         h5 
@@ -338,8 +337,6 @@ header
             font-weight: 400
             font-family: "Roboto Slab"
     .form-box 
-        display: inline-block
-        width: 70%
         .margin-left
             margin-left: 6%
         input 
@@ -390,14 +387,19 @@ header
         &:hover 
             color: white 
             background: #c0301c
-    span 
+    .atantion-submit  
         display: inline-block
         color: #c0301c
-        margin-left: 5%
     p 
         display: inline-block 
         font-size: 12px
         line-height: 20px
         font-weight: 400
         font-family: "Roboto Slab"
-z
+
+
+// @media screen and (max-width: 720px) {
+//   .submit 
+//         input
+//             width: 100%
+// }

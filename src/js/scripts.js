@@ -1,6 +1,6 @@
 let firstSection = document.querySelector(".services");
     popup = document.querySelectorAll(".popup"),
-    popupBox = document.querySelector(".popup-box"),
+    popupBox = document.querySelectorAll(".popup-box"),
     SectionGetInTouch = document.querySelector(".get-in-touch"),
     ButtonGoForm = document.querySelector(".get-in-touch-a"),
     oldPosition = 0,
@@ -15,13 +15,17 @@ let firstSection = document.querySelector(".services");
     aboutArrowRight = document.querySelector(".about-us-arrow-right"),
     menImgBox = document.querySelector(".men-img"),
     man = document.querySelector(".man");
+
+    localStorage.setItem("visitSite", 5);
     
-    
+
     ButtonGoForm.onclick= scrollBottom;
     window.onscroll = onScrolling;
     upScroll.onclick = scrollTop;
     aboutArrowLeft.onclick = slidLeft;
     aboutArrowRight.onclick = slidRight;
+
+
 
     popup.forEach(element => {
         element.onclick = popupOpen;
@@ -37,14 +41,12 @@ let firstSection = document.querySelector(".services");
     });    
     quoteScroll();
 
-function popupOpen(event){// dorobutu
+function popupOpen(event){
     event.preventDefault();
-    console.log(this);
     this.nextElementSibling.style.display = "block";
-    
 }
 function popupCloase(){
-    popupBox.style.display = "none";
+    this.parentElement.parentElement.style.display = "none";
 }
 function scrollBottom(event){
     event.preventDefault();
@@ -100,24 +102,27 @@ function filter(event){
 
     cardWork.forEach(element => {
         if(element.classList.contains(this.textContent) || this.textContent == "All"){
+            // element = localStorage.getItem("filterSet");
             element.style.display = "inline-block";
         }else{
             element.style.display = "none";
         }
-
+        localStorage.setItem("filterSet", this.textContent);
     });
 }
 function slidLeft(event){
     event.preventDefault();
-    console.log(menImgBox.scrollLeft);
     if(0 == menImgBox.scrollLeft){
         menImgBox.scrollLeft += menImgBox.scrollWidth;
     }else{
-        menImgBox.scrollLeft -= man.clientWidth;
+        menImgBox.scrollLeft -= man.getBoundingClientRect().width;
     }
 }
 function slidRight(event){
     event.preventDefault();
+    // console.log(Math.round(man.getBoundingClientRect().width*100)/100);
+    console.log(menImgBox.scrollWidth - menImgBox.scrollLeft);
+    console.log(menImgBox.scrollLeft);
     if(menImgBox.scrollWidth - menImgBox.scrollLeft == menImgBox.scrollLeft){
         menImgBox.scrollLeft = 0;
     }else{
